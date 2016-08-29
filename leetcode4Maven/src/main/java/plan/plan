@@ -860,5 +860,12 @@ zp:
 **********************************************************************************************************************
 jstack监测线程的状态
 可能出现的情况有等待IO、等待锁释放、条件等待，可能产生死锁，热锁
-
+死锁，Deadlock（重点关注） 
+等待资源，Waiting on condition（重点关注） 
+•  等待获取监视器，Waiting on monitor entry（重点关注） 
+阻塞，Blocked（重点关注） 
+•  执行中，Runnable 
+•  暂停，Suspended 
+•  对象等待中，Object.wait() 或 TIMED_WAITING 
+•  停止，Parked 
 
