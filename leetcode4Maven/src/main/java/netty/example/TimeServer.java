@@ -50,7 +50,7 @@ public class TimeServer {
         @Override
         protected void initChannel(SocketChannel arg0) throws Exception {
             System.out.println("server initChannel..");
-            arg0.pipeline().addLast(new TimeServerHandler());
+            arg0.pipeline().addLast(new TimeServerHandler()).addFirst(new TimeServerHandler());
         }
     }
 

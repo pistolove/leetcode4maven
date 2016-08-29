@@ -20,7 +20,7 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
         String body = new String(req, "UTF-8");
         System.out.println("The time server receive order:" + body);
         String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? new Date(
-                System.currentTimeMillis()).toString() : "BAD ORDER";
+                System.currentTimeMillis()).toString() : "BAD ORDER 哈哈哈哈";
         ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
         ctx.write(resp);
     }

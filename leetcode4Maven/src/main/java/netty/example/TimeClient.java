@@ -35,7 +35,9 @@ public class TimeClient {
                         protected void initChannel(SocketChannel arg0)
                                 throws Exception {
                             System.out.println("client initChannel..");
-                            arg0.pipeline().addLast(new TimeClientHandler());
+                            arg0.pipeline().addLast(new TimeClientHandler()).addFirst(new TimeClientHandler());
+//                            arg0.pipeline().addFirst(new TimeClientHandler2());
+//                            arg0.pipeline().addLast("2",new TimeClientHandler2());
                         }
                     });
             // 发起异步连接操作
