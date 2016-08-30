@@ -869,3 +869,11 @@ jstack监测线程的状态
 •  对象等待中，Object.wait() 或 TIMED_WAITING 
 •  停止，Parked 
 
+
+
+
+阻塞：当一个线程试图获取一个内部的对象锁（非java.util.concurrent库中的锁），而该锁被其他线程持有，则该线程进入阻塞状态。
+等待：当一个线程等待另一个线程通知调度器一个条件时，该线程进入等待状态。例如调用：Object.wait()、Thread.join()以及等待Lock或Condition。
+可以通过代码与JConsole来验证
+
+
