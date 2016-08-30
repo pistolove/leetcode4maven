@@ -232,13 +232,13 @@ public class WebServer {
         // System.setProperty("tomcat.log",
         // "/Users/wanglonghu/01.Work/mobileconf/logs");
         final ApplicationContext applicationContext = new ClassPathXmlApplicationContext(new String[] {
-                "classpath:xserver-api.xml", "classpath:xserver-api-servlet.xml" });
+                "classpath:xserver-api.xml"/*"classpath:xserver-api-servlet.xml" */});
         ServerConfig serverConfig = new ServerConfig();
         serverConfig.setPort(7777);
         serverConfig.setContextPath("/mobile");
         serverConfig.setObjectFactory(new SpringObjectFactory(applicationContext));
         WebServer webServer = new WebServer(serverConfig);
-        webServer.scanRouters("xserver.api.module");
+        webServer.scanRouters("module");
         webServer.run();
     }
 }
