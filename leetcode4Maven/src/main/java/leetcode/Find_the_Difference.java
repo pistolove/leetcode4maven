@@ -34,4 +34,17 @@ public class Find_the_Difference {
 
         return c1.length > c2.length ? c1[c1.length - 1] : c2[c2.length - 1];
     }
+    
+    
+    public static char findTheDifference1(String s, String t) {
+        if (s == null || t == null)
+            return ' ';
+        int len1 = t.length();
+        
+        return 0;
+    }
 }
+
+
+
+

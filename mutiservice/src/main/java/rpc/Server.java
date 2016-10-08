@@ -18,6 +18,6 @@ public class Server {
    @Test
    public void helloTest() throws InterruptedException {
        System.out.println("启动");
-       TimeUnit.HOURS.sleep(1);
+       TimeUnit.HOURS.sleep(5);
    }
 }
